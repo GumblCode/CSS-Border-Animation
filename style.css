@@ -6,6 +6,11 @@
 	font-weight: 800;
 }
 
+h1 {
+	background-color: #fcc23f;
+	border-radius: 5px 25px 5px 25px;
+}
+
 @font-face {
 	font-family: "Ink Free";
 	src: local("Ink Free"), url(./Inkfree.ttf);
@@ -76,5 +81,24 @@
 	}
 	100% {
 		transform: translateX(-100%);
+	}
+}
+
+.border-left {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	width: 3px;
+	background: linear-gradient(to top, #171618, #fcc23f);
+	animation: animate-border-left 2s linear infinite;
+	animation-delay: 1s;
+}
+@keyframes animate-border-left {
+	0% {
+		transform: translateY(100%);
+	}
+	100% {
+		transform: translateY(-100%);
 	}
 }
